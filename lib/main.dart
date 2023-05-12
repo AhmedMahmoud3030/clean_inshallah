@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       create: (context) => si.sl<WallpaperBloc>()..add(GetRecentImagesEvent()),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'WallPaper App',
         home: HomePage(),
       ),
     );

@@ -131,13 +131,37 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
                                 const SizedBox(height: 10),
-                                Text(
-                                  images[index].title,
-                                  style: const TextStyle(
-                                      overflow: TextOverflow.ellipsis,
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w400),
-                                ),
+                                images[index].title == ""
+                                    ? ClipRRect(
+                                        borderRadius: BorderRadius.circular(15),
+                                        child: Container(
+                                          decoration: const BoxDecoration(
+                                              gradient: LinearGradient(
+                                            begin: Alignment.topRight,
+                                            end: Alignment.bottomLeft,
+                                            colors: [
+                                              Colors.purple,
+                                              Colors.red,
+                                            ],
+                                          )),
+                                          height: 40,
+                                          child: const Text(
+                                            "No Title From Api, sorry",
+                                            style: TextStyle(
+                                                fontSize: 18,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      )
+                                    : Text(
+                                        images[index].title,
+                                        style: const TextStyle(
+                                            overflow: TextOverflow.ellipsis,
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400),
+                                      ),
                               ],
                             ),
                           ),

@@ -34,14 +34,23 @@ class ImageViewPage extends StatelessWidget {
             children: [
               SizedBox(
                 width: 200,
-                child: Text(
-                  imageR.title,
-                  style: const TextStyle(
-                    overflow: TextOverflow.ellipsis,
-                    color: Colors.black,
-                    fontSize: 20,
-                  ),
-                ),
+                child: imageR.title == ''
+                    ? const Text(
+                        "No Title Found",
+                        style: TextStyle(
+                          overflow: TextOverflow.ellipsis,
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      )
+                    : Text(
+                        imageR.title,
+                        style: const TextStyle(
+                          overflow: TextOverflow.ellipsis,
+                          color: Colors.black,
+                          fontSize: 20,
+                        ),
+                      ),
               ),
               IconButton(
                 icon: const Icon(
