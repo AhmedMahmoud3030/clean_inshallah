@@ -13,7 +13,7 @@ class GetRecentImagesUseCase
 
   @override
   Future<Either<Failure, List<ImageDataR>>> call(
-      NoParameters noParameters) async {
+      NoParameters parameters) async {
     return await repository.getRecentImages(pageIndex: 1);
   }
 }

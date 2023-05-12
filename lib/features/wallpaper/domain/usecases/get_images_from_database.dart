@@ -13,7 +13,7 @@ class GetSavedImagesUseCase
 
   @override
   Future<Either<Failure, List<ImageDataL>>> call(
-      NoParameters noParameters) async {
+      NoParameters parameters) async {
     return await repository.getSavedImages();
   }
 }

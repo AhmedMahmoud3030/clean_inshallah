@@ -26,7 +26,6 @@ class ImageRemoteDataSourceImpl extends ImageRemoteDataSource {
   Future<List<ImageDataR>> getRecentImages(int pageIndex) async {
     final response = await Dio().get(
         '${ApiConstants.baseUrl}?method=flickr.photos.getRecent&api_key=${ApiConstants.apiKey}&per_page=10&format=json&nojsoncallback=1&page=$pageIndex');
-    print(response);
     if (response.statusCode == 200) {
       return List<ImageDataR>.from(
         (response.data["photos"]["photo"] as List).map(
@@ -41,7 +40,6 @@ class ImageRemoteDataSourceImpl extends ImageRemoteDataSource {
   @override
   Future<List<ImageDataR>> searchRecentImages(String query) async {
     final response = await Dio().get(ApiConstants.searchImage(query));
-    print(response);
     if (response.statusCode == 200) {
       return List<ImageDataR>.from(
         (response.data["photos"]["photo"] as List).map(
@@ -64,7 +62,6 @@ class ImageRemoteDataSourceImpl extends ImageRemoteDataSource {
       await db.execute(
           'CREATE TABLE IF NOT EXISTS images (id INTEGER PRIMARY KEY, data BLOB, title TEXT)');
       await db.insert('images', {'data': imageData, 'title': image.title});
-      print('Saved hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
       return unit;
     } else {
       throw ServerException();

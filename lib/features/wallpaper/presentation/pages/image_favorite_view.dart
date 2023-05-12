@@ -41,7 +41,7 @@ class ImageFavoriteViewPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Icon(
+              const Icon(
                 Icons.favorite,
                 color: Colors.black,
                 size: 30,
