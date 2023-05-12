@@ -36,7 +36,7 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text("Home"),
-            onTap: () => Navigator.of(context).push(
+            onTap: () => Navigator.of(context).pushReplacement(
               MaterialPageRoute(
                 builder: (context) => const HomePage(),
               ),
@@ -45,7 +45,7 @@ class MyDrawer extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.favorite),
             title: const Text("Favorites"),
-            onTap: () => Navigator.of(context).push(
+            onTap: () => Navigator.of(context).pushReplacement(
               MaterialPageRoute(
                 builder: (context) => const FavoritePage(),
               ),
