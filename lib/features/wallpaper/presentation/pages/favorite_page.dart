@@ -19,11 +19,11 @@ class FavoritePage extends StatelessWidget {
           drawer: const MyDrawer(),
           body: Column(
             children: [
-              const Padding(
-                padding: EdgeInsets.all(20.0),
+              Padding(
+                padding: const EdgeInsets.all(20.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text(
                       'My',
                       style: TextStyle(

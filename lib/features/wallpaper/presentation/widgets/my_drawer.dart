@@ -10,8 +10,8 @@ class MyDrawer extends StatelessWidget {
     return Drawer(
       child: ListView(
         children: [
-          const DrawerHeader(
-            decoration: BoxDecoration(
+          DrawerHeader(
+            decoration: const BoxDecoration(
               color: Colors.deepPurpleAccent,
               image: DecorationImage(
                 image: NetworkImage(
@@ -21,7 +21,7 @@ class MyDrawer extends StatelessWidget {
               ),
             ),
             child: Stack(
-              children: [
+              children: const [
                 Positioned(
                   bottom: 8.0,
                   left: 4.0,

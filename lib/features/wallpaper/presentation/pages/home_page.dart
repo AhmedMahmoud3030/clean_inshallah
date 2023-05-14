@@ -16,11 +16,11 @@ class HomePage extends StatelessWidget {
         drawer: const MyDrawer(),
         body: Column(
           children: [
-            const Padding(
-              padding: EdgeInsets.all(20.0),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     'Wallpaper',
                     style: TextStyle(
@@ -53,10 +53,10 @@ class HomePage extends StatelessWidget {
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(builder: (context) => const SearchPage()),
                 ),
-                child: const Card(
+                child: Card(
                   elevation: 5,
                   child: Row(
-                    children: [
+                    children: const [
                       SizedBox(
                         width: 20,
                       ),
